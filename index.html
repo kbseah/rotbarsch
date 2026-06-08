@@ -1,0 +1,222 @@
+<html>
+  <meta charset="UTF-8">
+
+  <head>
+    <style>
+      midi-visualizer .piano-roll-visualizer {
+        display: block;
+        width: inherit;
+        overflow: auto;
+      }
+      midi-visualizer .piano-roll-visualizer svg rect.note {
+        opacity: calc(min(1, (var(--midi-velocity) + 30) / 128) * 0.75); }
+      midi-visualizer .piano-roll-visualizer svg rect.note.active {
+          opacity: calc(min(1, (var(--midi-velocity) + 30) / 128) * 0.9);
+          stroke: black;
+          stroke-width: 0.75;
+          stroke-opacity: 0.75; }
+      midi-visualizer svg rect.note[data-instrument="0"]{ fill: #0062cc; }
+      midi-visualizer svg rect.note[data-instrument="1"]{ fill: #00b680; }
+      midi-visualizer svg rect.note[data-instrument="2"]{ fill: #de0015; }
+      midi-visualizer svg rect.note[data-instrument="3"]{ fill: #4f00cf; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+  </head>
+
+<body>
+  <h1>Music</h1>
+
+  <p>Most pieces here are for four-part SATB choir, although the singability is not guaranteed. Pressing play will also bring up a piano-roll style visualizer.</p>
+
+  <h2>Musica Sacra</h2>
+
+  <h3>What Profit Has a Man</h3>
+    <p>Text: Ecclesiastes 1 (adapted).</p>
+    <midi-visualizer type="piano-roll" id="visProfit"></midi-visualizer>
+    <midi-player
+      src="what_profit.mid"
+      visualizer="#visProfit"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+    <p>(Italicized lines are sung polyphonically with the voice(s) singing the main lyric above.)</p>
+    <blockquote>
+      <p>
+      Vanity, vanity, all is but vanity;<br/>
+      What profit has a man of his labour?<br/></p>
+
+      <p>
+      That which has been, it is that which shall be;<br/>
+      there is no new thing which is under the sun.<br/></p>
+
+      <p>
+      I gave my heart to search and to seek;<br/>
+      <i>Lo, the sun goes round; behold, the wind blows round; see how the streams flow into seas that never</i><br/>
+      and behold, all is vanity and vexation.<br/>
+      <i>fill up. Is the eye content, and is the ear filled up? All things are filled with weariness, no may can say it.</i><br/></p>
+
+      <p>
+      Where knowledge grows, there grows sorrow also;<br/>
+      for this is but a striving, a striving after wind.<br/></p>
+
+      
+      <p>
+      Former things have left no remembrance;<br/>
+      <i>I have sought out wisdom of all under heaven and I see that all is vanity</i><br/>
+      nor will things yet to come leave remembrance;<br/>
+      <i>I have sought out wisdom of all under heaven and I see that all is vanity</i><br/>
+      Not in ages before, nor in ages to come.<br/>
+      <i>I have sought out wisdom of all under heaven and I found that all is vanity</i><br/>
+      What has been done is what will be done.<br/></p>
+
+      <p>
+      Where knowledge grows, there grows sorrow also;<br/>
+      for this is but a striving, a striving after wind.<br/></p>
+    </blockquote>
+
+  <h3>He is Like a Tree</h3>
+    <p>In the style of a chant and response.</p>
+    <p>Text: Psalm 1 (ESV, adapted)</p>
+    <midi-visualizer type="piano-roll" id="visTree"></midi-visualizer>
+    <midi-player
+      src="like_a_tree.mid"
+      visualizer="#visTree"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+    <blockquote>
+      <p>
+      Blessed is the man<br/>
+      who walks not in the counsel of the wicked,<br/>
+      nor stands in the way of sinners,<br/>
+      nor sits in the seat of scoffers;<br/></p>
+
+      <p>
+      but his delight is in the law of the Lord,<br/>
+      and on his law he meditates day and night.<br/></p>
+
+      <p>
+      [Refrain]<br/>
+      He is like a tree planted by streams of water<br/>
+      that yields is fruit in its season,<br/>
+      and its leaf does not wither.<br/></p>
+
+      <p>
+      [Refrain]<br/></p>
+
+      <p>
+      Th’wicked are not so,<br/>
+      but are like chaff that the wind drives away.<br/>
+      thus the wicked will not stand in the judgement,<br/>
+      nor sinners in the congregation of the righteous;<br/></p>
+
+      <p>
+      for the Lord knows the way of the righteous,<br/>
+      but the way of the wicked will perish.<br/></p>
+
+      <p>
+      [Refrain x 2]<br/></p>
+
+      <p>
+      In all that he does, he prospers.<br/></p>
+    </blockquote>
+
+  <h3>Your Grace Suffices</h3>
+    <midi-visualizer type="piano-roll" id="visGrace"></midi-visualizer>
+    <midi-player
+      src="your_grace_suffices.mid"
+      visualizer="#visGrace"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+    <blockquote>
+      <p>
+      Lord, You put the light into my life,<br/>
+      let me come to give thanks unto You;<br/>
+      O Lord, what am I but a mote in Your sight<br/>
+      and yet Your love stays true.<br/></p>
+
+      <p>
+      Lord, Your grace should be all that I need,<br/>
+      help me let Your Spirit come through;<br/>
+      O Lord, take the shards of this broken heart<br/>
+      and make now something new.<br/></p>
+
+      <p>
+      Grace, freely given was bought at a cost that I stubbornly chose not to see.<br/>
+      Grace, freely taken when I bear my cross and when I heed Your call: “follow me!”.<br/></p>
+
+      <p>
+      Lord, Your grace should be all that I need,<br/>
+      let me trust in Your providence too;<br/>
+      behold how the birds of the air soar without<br/>
+      any care, fed by You.<br/></p>
+
+      <p>
+      Lord, let Your Spirit guide all that I do,<br/>
+      for Your grace is enough, that is true.<br/></p>
+    </blockquote>
+
+  <h3>A Benediction</h3>
+    <midi-visualizer type="piano-roll" id="visBenediction"></midi-visualizer>
+    <midi-player
+      src="benediction.mid"
+      visualizer="#visBenediction"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+    <blockquote>
+      <p>
+      May the Lord bless you in all your steps;<br/>
+      May His Spirit calm you in your fears;<br/>
+      May His presence steady your weak hand;<br/>
+      May His Word be with you all your years.<br/></p>
+
+      <p>
+      May you follow boldly in His way;<br/>
+      May you see His face despite your tears;<br/>
+      May you show His light in all you do;<br/>
+      May you speak His truth to all who hear.<br/></p>
+
+      <p>
+      May you receive the Lord’s good grace;<br/>
+      May <a href="https://en.wikipedia.org/wiki/Von_guten_M%C3%A4chten">gentle powers</a> keep you safe.<br/></p>
+    </blockquote>
+
+
+    <h2>Musica Profana</h2>
+
+    <h3>Gently Swerves the Tram</h3>
+    <p>A pleasant afternoon commute set to music, intended for a wind quartet. Reminiscent of the background music in classic SimCity?</p>
+    <midi-visualizer type="piano-roll" id="visGently"></midi-visualizer>
+    <midi-player
+      src="gently_swerves.mid"
+      visualizer="#visGently"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+
+    <h3>What We Cannot Speak Of (TLP7)</h3>
+    <p>One of the forbidding strictures of 20th Century philosophy to be sung with gusto.</p>
+    <midi-visualizer type="piano-roll" id="visTlp7"></midi-visualizer>
+    <midi-player
+      src="tlp7.mid"
+      visualizer="#visTlp7"
+      sound-font>
+    </midi-player>
+    <blockquote>
+      <p>
+      What we cannot speak of we must pass in silence,<br/>
+      we must pass in silence whereof we cannot speak.<br/>
+      What we cannot speak of we must pass in silence,<br/>
+      we must pass in silence whereof we cannot speak.<br/></p>
+
+      <p>
+      Wovon man nicht sprechen kann,<br/>
+      davon muss man schweigen.<br/>
+      Was sich überhaupt sagen lässt,<br/>
+      lässt sich klar sagen.<br/></p>
+
+      <p>—Ludwig Wittgenstein (<i>Tractatus Logico-Philosophicus</i> 7)</p>
+    </blockquote>
+
+
+    <p>Music and original text by Brandon Seah, copyright 2026, released under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 licence</a>. This means you are free to share and adapt the material, so long as the author is credited, it is not for commercial use, and any derivative works are shared under the same licence.</p>
+  <p>This webpage uses the <a href="https://cifkao.github.io/html-midi-player/">html-midi-player</a> by <a href="https://github.com/cifkao">Ondřej Cífka</a></p>
+</body>
+</html>
