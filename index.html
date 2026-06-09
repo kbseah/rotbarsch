@@ -28,9 +28,20 @@
 
   <p>Most pieces here are for four-part SATB choir, although the singability is not guaranteed. Pressing play will also bring up a piano-roll style visualizer.</p>
 
-  <h2>Musica Sacra</h2>
+  <ul>
+    <li><a href="#MusicaSacra">Musica Sacra</a></li>
+    <li><a href="#MusicaProfana">Musica Profana</a></li>
+  </ul>
 
-  <h3>What Profit Has a Man</h3>
+  <h2 id="MusicaSacra">Musica Sacra</h2>
+  <ul>
+    <li><a href="#Profit">What Profit Has a Man</a> (Ecclesiastes 1)</li>
+    <li><a href="#Tree">He is Like a Tree</a> (Psalm 1)</li>
+    <li><a href="#Grace">Your Grace Suffices</a></li>
+    <li><a href="#Benediction">A Benediction</a></li>
+  </ul>
+
+  <h3 id="Profit">What Profit Has a Man</h3>
     <p>Text: Ecclesiastes 1 (adapted).</p>
     <midi-visualizer type="piano-roll" id="visProfit"></midi-visualizer>
     <midi-player
@@ -38,7 +49,7 @@
       visualizer="#visProfit"
       sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
     </midi-player>
-    <p>(Italicized lines are sung polyphonically with the voice(s) singing the main lyric above.)</p>
+    <p>(Italicized lines are sung polyphonically along with the voice(s) singing the main lyric above.)</p>
     <blockquote>
       <p>
       Vanity, vanity, all is but vanity;<br/>
@@ -52,7 +63,7 @@
       I gave my heart to search and to seek;<br/>
       <i>Lo, the sun goes round; behold, the wind blows round; see how the streams flow into seas that never</i><br/>
       and behold, all is vanity and vexation.<br/>
-      <i>fill up. Is the eye content, and is the ear filled up? All things are filled with weariness, no may can say it.</i><br/></p>
+      <i>fill up. Is the eye content, and is the ear filled up? All things are filled with weariness, no man can say it.</i><br/></p>
 
       <p>
       Where knowledge grows, there grows sorrow also;<br/>
@@ -73,7 +84,7 @@
       for this is but a striving, a striving after wind.<br/></p>
     </blockquote>
 
-  <h3>He is Like a Tree</h3>
+  <h3 id="Tree">He is Like a Tree</h3>
     <p>In the style of a chant and response.</p>
     <p>Text: Psalm 1 (ESV, adapted)</p>
     <midi-visualizer type="piano-roll" id="visTree"></midi-visualizer>
@@ -119,7 +130,7 @@
       In all that he does, he prospers.<br/></p>
     </blockquote>
 
-  <h3>Your Grace Suffices</h3>
+  <h3 id="Grace">Your Grace Suffices</h3>
     <midi-visualizer type="piano-roll" id="visGrace"></midi-visualizer>
     <midi-player
       src="your_grace_suffices.mid"
@@ -154,7 +165,7 @@
       for Your grace is enough, that is true.<br/></p>
     </blockquote>
 
-  <h3>A Benediction</h3>
+  <h3 id="Benediction">A Benediction</h3>
     <midi-visualizer type="piano-roll" id="visBenediction"></midi-visualizer>
     <midi-player
       src="benediction.mid"
@@ -180,9 +191,13 @@
     </blockquote>
 
 
-    <h2>Musica Profana</h2>
+    <h2 id="MusicaProfana">Musica Profana</h2>
+    <ul>
+      <li><a href="#Gently">Gently Swerves the Tram</a></li>
+      <li><a href="#Tlp7">What We Cannot Speak Of</a> (<i>Tractatus Logico-Philosophicus</i> 7)</li>
+    </ul>
 
-    <h3>Gently Swerves the Tram</h3>
+    <h3 id="Gently">Gently Swerves the Tram</h3>
     <p>A pleasant afternoon commute set to music, intended for a wind quartet. Reminiscent of the background music in classic SimCity?</p>
     <midi-visualizer type="piano-roll" id="visGently"></midi-visualizer>
     <midi-player
@@ -191,7 +206,7 @@
       sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
     </midi-player>
 
-    <h3>What We Cannot Speak Of (TLP7)</h3>
+    <h3 id="Tlp7">What We Cannot Speak Of (TLP7)</h3>
     <p>One of the forbidding strictures of 20th Century philosophy to be sung with gusto.</p>
     <midi-visualizer type="piano-roll" id="visTlp7"></midi-visualizer>
     <midi-player
