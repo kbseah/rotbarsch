@@ -1,0 +1,101 @@
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <style>
+      midi-visualizer .piano-roll-visualizer {
+        display: block;
+        width: inherit;
+        overflow: auto;
+      }
+      midi-visualizer .piano-roll-visualizer svg rect.note {
+        opacity: calc(min(1, (var(--midi-velocity) + 30) / 128) * 0.75); }
+      midi-visualizer .piano-roll-visualizer svg rect.note.active {
+          opacity: calc(min(1, (var(--midi-velocity) + 30) / 128) * 0.9);
+          stroke: black;
+          stroke-width: 0.75;
+          stroke-opacity: 0.75; }
+      midi-visualizer svg rect.note[data-instrument="0"]{ fill: #0062cc; }
+      midi-visualizer svg rect.note[data-instrument="1"]{ fill: #00b680; }
+      midi-visualizer svg rect.note[data-instrument="2"]{ fill: #de0015; }
+      midi-visualizer svg rect.note[data-instrument="3"]{ fill: #4f00cf; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+  </head>
+  <body>
+    <h1>Musica Profana</h1>
+
+    <p>This section presents the work of the composer R.O.T. Barsch, found in a
+    waterlogged notebook stranded on the shoreline of a mid-Atlantic island. Of
+    the composer, nothing beyond his or her initials and name are known. Their
+    musical style has been described as “somehow simultaneously wet behind the
+    ears and washed up.” As more works are deciphered, they will be added
+    here.</p>
+
+    <ul>
+      <li><a href="#Gently">Gently Swerves the Tram</a></li>
+      <li><a href="#Modal">Modal Mondays</a></li>
+      <li><a href="#Tlp7">What We Cannot Speak Of</a> (<i>Tractatus Logico-Philosophicus</i> 7)</li>
+    </ul>
+
+    <p>Back to <a href="index.html">Main</a></p>
+
+    <h2 id="Gently">Gently Swerves the Tram</h2>
+
+    <p>A pleasant afternoon commute set to music, intended for a wind quartet.
+    Reminiscent of the background music in classic SimCity?</p>
+
+    <midi-visualizer type="piano-roll" id="visGently"></midi-visualizer>
+    <midi-player
+      src="gently_swerves.mid"
+      visualizer="#visGently"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+
+    <h2 id="Modal">Modal Mondays</h2>
+    <midi-visualizer type="piano-roll" id="visModal"></midi-visualizer>
+    <midi-player
+      src="modal.mid"
+      visualizer="#visModal"
+      sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander">
+    </midi-player>
+
+    <h2 id="Tlp7">What We Cannot Speak Of (TLP7)</h2>
+    <p>A forbidding stricture of 20th Century philosophy, to be sung with gusto.</p>
+    <p>Text: Ludwig Wittgenstein, <a
+      href="https://wittgensteinproject.org/w/index.php/Tractatus_Logico-Philosophicus_(English)#7"<i>Tractatus
+        Logico-Philosophicus</i> 7</a>, own translation.</p>
+    <midi-visualizer type="piano-roll" id="visTlp7"></midi-visualizer>
+    <midi-player
+      src="tlp7.mid"
+      visualizer="#visTlp7"
+      sound-font>
+    </midi-player>
+    <blockquote>
+      <p>
+      What we cannot speak of we must pass in silence,<br/>
+      we must pass in silence whereof we cannot speak.<br/>
+      What we cannot speak of we must pass in silence,<br/>
+      we must pass in silence whereof we cannot speak.<br/></p>
+
+      <p>
+      Wovon man nicht sprechen kann,<br/>
+      davon muss man schweigen.<br/>
+      Was sich überhaupt sagen lässt,<br/>
+      lässt sich klar sagen.<br/></p>
+    </blockquote>
+
+  <hr/>
+
+  <p>Back to <a href="index.html">Main</p>
+
+  <p>Music and original text by Brandon Seah, copyright 2026, released under <a
+    href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0
+    licence</a>. This means you are free to share and adapt the material, so
+  long as the author is credited, it is not for commercial use, and any
+  derivative works are shared under the same licence.</p>
+  <p>This webpage uses the <a
+    href="https://cifkao.github.io/html-midi-player/">html-midi-player</a> by
+  <a href="https://github.com/cifkao">Ondřej Cífka</a></p>
+
+  </body>
+</html>
